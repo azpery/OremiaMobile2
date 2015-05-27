@@ -7,12 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12B3472C1B109E3000A8AC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3472B1B109E3000A8AC3D /* AppDelegate.swift */; };
-		12B3472E1B109E3000A8AC3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3472D1B109E3000A8AC3D /* ViewController.swift */; };
-		12B347311B109E3000A8AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B3472F1B109E3000A8AC3D /* Main.storyboard */; };
-		12B347331B109E3000A8AC3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B347321B109E3000A8AC3D /* Images.xcassets */; };
-		12B347361B109E3000A8AC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B347341B109E3000A8AC3D /* LaunchScreen.xib */; };
+		129D28B91B15F27000EF28FA /* MSCollectionViewCalendarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D28B81B15F27000EF28FA /* MSCollectionViewCalendarLayout.m */; };
+		129D28BC1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D28BB1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m */; };
+		129D28C51B1613EE00EF28FA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129D28C41B1613EE00EF28FA /* CalendarViewController.swift */; };
 		12B347421B109E3000A8AC3D /* Oremia_Mobile_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347411B109E3000A8AC3D /* Oremia_Mobile_2Tests.swift */; };
+		12B347C11B10B0AD00A8AC3D /* Actes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479A1B10B0AD00A8AC3D /* Actes.swift */; };
+		12B347C21B10B0AD00A8AC3D /* ActesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479B1B10B0AD00A8AC3D /* ActesTableViewCell.swift */; };
+		12B347C31B10B0AD00A8AC3D /* ActesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479C1B10B0AD00A8AC3D /* ActesTableViewController.swift */; };
+		12B347C41B10B0AD00A8AC3D /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479D1B10B0AD00A8AC3D /* APIController.swift */; };
+		12B347C51B10B0AD00A8AC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479E1B10B0AD00A8AC3D /* AppDelegate.swift */; };
+		12B347C61B10B0AD00A8AC3D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3479F1B10B0AD00A8AC3D /* ConfigurationViewController.swift */; };
+		12B347C71B10B0AD00A8AC3D /* ConnexionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A01B10B0AD00A8AC3D /* ConnexionString.swift */; };
+		12B347C81B10B0AD00A8AC3D /* DetailNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A11B10B0AD00A8AC3D /* DetailNavigationController.swift */; };
+		12B347C91B10B0AD00A8AC3D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A21B10B0AD00A8AC3D /* DetailsViewController.swift */; };
+		12B347CA1B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A31B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift */; };
+		12B347CB1B10B0AD00A8AC3D /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A41B10B0AD00A8AC3D /* Documents.swift */; };
+		12B347CC1B10B0AD00A8AC3D /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A51B10B0AD00A8AC3D /* DocumentTableViewCell.swift */; };
+		12B347CD1B10B0AD00A8AC3D /* EtatCivilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A61B10B0AD00A8AC3D /* EtatCivilViewController.swift */; };
+		12B347CE1B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A71B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift */; };
+		12B347CF1B10B0AD00A8AC3D /* FullScreenRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A81B10B0AD00A8AC3D /* FullScreenRadioViewController.swift */; };
+		12B347D11B10B0AD00A8AC3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B347AB1B10B0AD00A8AC3D /* Images.xcassets */; };
+		12B347D21B10B0AD00A8AC3D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B347AC1B10B0AD00A8AC3D /* Info.plist */; };
+		12B347D31B10B0AD00A8AC3D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AD1B10B0AD00A8AC3D /* MapViewController.swift */; };
+		12B347D41B10B0AD00A8AC3D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AE1B10B0AD00A8AC3D /* MenuController.swift */; };
+		12B347D51B10B0AD00A8AC3D /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AF1B10B0AD00A8AC3D /* model.swift */; };
+		12B347D61B10B0AD00A8AC3D /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B01B10B0AD00A8AC3D /* NewsTableViewCell.swift */; };
+		12B347D71B10B0AD00A8AC3D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B11B10B0AD00A8AC3D /* NewsTableViewController.swift */; };
+		12B347D91B10B0AD00A8AC3D /* patients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B31B10B0AD00A8AC3D /* patients.swift */; };
+		12B347DA1B10B0AD00A8AC3D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B41B10B0AD00A8AC3D /* PhotoViewController.swift */; };
+		12B347DB1B10B0AD00A8AC3D /* praticien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B51B10B0AD00A8AC3D /* praticien.swift */; };
+		12B347DC1B10B0AD00A8AC3D /* RadioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B61B10B0AD00A8AC3D /* RadioCollectionViewCell.swift */; };
+		12B347DD1B10B0AD00A8AC3D /* RadioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B71B10B0AD00A8AC3D /* RadioCollectionViewController.swift */; };
+		12B347DE1B10B0AD00A8AC3D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B81B10B0AD00A8AC3D /* Reachability.swift */; };
+		12B347DF1B10B0AD00A8AC3D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347B91B10B0AD00A8AC3D /* SCLAlertView.swift */; };
+		12B347E01B10B0AD00A8AC3D /* selectedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347BA1B10B0AD00A8AC3D /* selectedUser.swift */; };
+		12B347E11B10B0AD00A8AC3D /* selectPratViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347BB1B10B0AD00A8AC3D /* selectPratViewController.swift */; };
+		12B347E21B10B0AD00A8AC3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347BD1B10B0AD00A8AC3D /* TabBarViewController.swift */; };
+		12B347E31B10B0AD00A8AC3D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347BE1B10B0AD00A8AC3D /* Track.swift */; };
+		12B347E41B10B0AD00A8AC3D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347BF1B10B0AD00A8AC3D /* TrackCell.swift */; };
+		12B347E51B10B0AD00A8AC3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347C01B10B0AD00A8AC3D /* ViewController.swift */; };
+		12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */; };
+		12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E81B10B0EB00A8AC3D /* Main.storyboard */; };
+		12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +62,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		129D28B71B15F27000EF28FA /* MSCollectionViewCalendarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCalendarLayout.h; sourceTree = "<group>"; };
+		129D28B81B15F27000EF28FA /* MSCollectionViewCalendarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCollectionViewCalendarLayout.m; sourceTree = "<group>"; };
+		129D28BA1B15F2ED00EF28FA /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
+		129D28BB1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CupertinoYankee.m"; sourceTree = "<group>"; };
+		129D28C41B1613EE00EF28FA /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		12B347261B109E3000A8AC3D /* Oremia Mobile 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oremia Mobile 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B3472A1B109E3000A8AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12B3472B1B109E3000A8AC3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12B3472D1B109E3000A8AC3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		12B347301B109E3000A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12B347321B109E3000A8AC3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		12B347351B109E3000A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		12B3473B1B109E3000A8AC3D /* Oremia Mobile 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Oremia Mobile 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B347401B109E3000A8AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12B347411B109E3000A8AC3D /* Oremia_Mobile_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oremia_Mobile_2Tests.swift; sourceTree = "<group>"; };
+		12B347991B10B0AB00A8AC3D /* Oremia Mobile 2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Oremia Mobile 2-Bridging-Header.h"; sourceTree = "<group>"; };
+		12B3479A1B10B0AD00A8AC3D /* Actes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actes.swift; sourceTree = "<group>"; };
+		12B3479B1B10B0AD00A8AC3D /* ActesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActesTableViewCell.swift; sourceTree = "<group>"; };
+		12B3479C1B10B0AD00A8AC3D /* ActesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActesTableViewController.swift; sourceTree = "<group>"; };
+		12B3479D1B10B0AD00A8AC3D /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		12B3479E1B10B0AD00A8AC3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12B3479F1B10B0AD00A8AC3D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		12B347A01B10B0AD00A8AC3D /* ConnexionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionString.swift; sourceTree = "<group>"; };
+		12B347A11B10B0AD00A8AC3D /* DetailNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNavigationController.swift; sourceTree = "<group>"; };
+		12B347A21B10B0AD00A8AC3D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		12B347A31B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPatientTableViewController.swift; sourceTree = "<group>"; };
+		12B347A41B10B0AD00A8AC3D /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
+		12B347A51B10B0AD00A8AC3D /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		12B347A61B10B0AD00A8AC3D /* EtatCivilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatCivilViewController.swift; sourceTree = "<group>"; };
+		12B347A71B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenDocumentViewController.swift; sourceTree = "<group>"; };
+		12B347A81B10B0AD00A8AC3D /* FullScreenRadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenRadioViewController.swift; sourceTree = "<group>"; };
+		12B347A91B10B0AD00A8AC3D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		12B347AB1B10B0AD00A8AC3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		12B347AC1B10B0AD00A8AC3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B347AD1B10B0AD00A8AC3D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		12B347AE1B10B0AD00A8AC3D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		12B347AF1B10B0AD00A8AC3D /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		12B347B01B10B0AD00A8AC3D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		12B347B11B10B0AD00A8AC3D /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		12B347B31B10B0AD00A8AC3D /* patients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patients.swift; sourceTree = "<group>"; };
+		12B347B41B10B0AD00A8AC3D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		12B347B51B10B0AD00A8AC3D /* praticien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = praticien.swift; sourceTree = "<group>"; };
+		12B347B61B10B0AD00A8AC3D /* RadioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioCollectionViewCell.swift; sourceTree = "<group>"; };
+		12B347B71B10B0AD00A8AC3D /* RadioCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioCollectionViewController.swift; sourceTree = "<group>"; };
+		12B347B81B10B0AD00A8AC3D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		12B347B91B10B0AD00A8AC3D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		12B347BA1B10B0AD00A8AC3D /* selectedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectedUser.swift; sourceTree = "<group>"; };
+		12B347BB1B10B0AD00A8AC3D /* selectPratViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectPratViewController.swift; sourceTree = "<group>"; };
+		12B347BC1B10B0AD00A8AC3D /* SidebarMenu-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SidebarMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		12B347BD1B10B0AD00A8AC3D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		12B347BE1B10B0AD00A8AC3D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		12B347BF1B10B0AD00A8AC3D /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		12B347C01B10B0AD00A8AC3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12B347E71B10B0EB00A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		12B347E91B10B0EB00A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		12B347ED1B10B10E00A8AC3D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +134,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1286599D1B1475A100C2EEDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				12B3479A1B10B0AD00A8AC3D /* Actes.swift */,
+				12B347A01B10B0AD00A8AC3D /* ConnexionString.swift */,
+				12B347A41B10B0AD00A8AC3D /* Documents.swift */,
+				12B347B31B10B0AD00A8AC3D /* patients.swift */,
+				12B347B51B10B0AD00A8AC3D /* praticien.swift */,
+				12B347BA1B10B0AD00A8AC3D /* selectedUser.swift */,
+				12B347BE1B10B0AD00A8AC3D /* Track.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1286599E1B1475CA00C2EEDF /* Third part */ = {
+			isa = PBXGroup;
+			children = (
+				128659A41B14AE7700C2EEDF /* MSCollectionView */,
+				12B347EF1B10B6A900A8AC3D /* SWRevealViewController */,
+				12B347B81B10B0AD00A8AC3D /* Reachability.swift */,
+				12B347B91B10B0AD00A8AC3D /* SCLAlertView.swift */,
+			);
+			name = "Third part";
+			sourceTree = "<group>";
+		};
+		1286599F1B1475F100C2EEDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12B3479D1B10B0AD00A8AC3D /* APIController.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		128659A41B14AE7700C2EEDF /* MSCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				129D28BA1B15F2ED00EF28FA /* NSDate+CupertinoYankee.h */,
+				129D28BB1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m */,
+				129D28B71B15F27000EF28FA /* MSCollectionViewCalendarLayout.h */,
+				129D28B81B15F27000EF28FA /* MSCollectionViewCalendarLayout.m */,
+			);
+			name = MSCollectionView;
+			sourceTree = "<group>";
+		};
 		12B3471D1B109E3000A8AC3D = {
 			isa = PBXGroup;
 			children = (
+				12B347291B109E3000A8AC3D /* Supporting Files */,
 				12B347281B109E3000A8AC3D /* Oremia Mobile 2 */,
 				12B3473E1B109E3000A8AC3D /* Oremia Mobile 2Tests */,
 				12B347271B109E3000A8AC3D /* Products */,
@@ -77,12 +200,17 @@
 		12B347281B109E3000A8AC3D /* Oremia Mobile 2 */ = {
 			isa = PBXGroup;
 			children = (
-				12B3472B1B109E3000A8AC3D /* AppDelegate.swift */,
-				12B3472D1B109E3000A8AC3D /* ViewController.swift */,
-				12B3472F1B109E3000A8AC3D /* Main.storyboard */,
-				12B347321B109E3000A8AC3D /* Images.xcassets */,
-				12B347341B109E3000A8AC3D /* LaunchScreen.xib */,
-				12B347291B109E3000A8AC3D /* Supporting Files */,
+				1286599F1B1475F100C2EEDF /* Model */,
+				1286599D1B1475A100C2EEDF /* Classes */,
+				12B347F31B10B73B00A8AC3D /* Trash */,
+				1286599E1B1475CA00C2EEDF /* Third part */,
+				12B347F01B10B6E100A8AC3D /* ViewControllers */,
+				12B3479E1B10B0AD00A8AC3D /* AppDelegate.swift */,
+				12B347991B10B0AB00A8AC3D /* Oremia Mobile 2-Bridging-Header.h */,
+				12B347AB1B10B0AD00A8AC3D /* Images.xcassets */,
+				12B347AC1B10B0AD00A8AC3D /* Info.plist */,
+				12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */,
+				12B347E81B10B0EB00A8AC3D /* Main.storyboard */,
 			);
 			path = "Oremia Mobile 2";
 			sourceTree = "<group>";
@@ -93,6 +221,7 @@
 				12B3472A1B109E3000A8AC3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "Oremia Mobile 2";
 			sourceTree = "<group>";
 		};
 		12B3473E1B109E3000A8AC3D /* Oremia Mobile 2Tests */ = {
@@ -110,6 +239,70 @@
 				12B347401B109E3000A8AC3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12B347EF1B10B6A900A8AC3D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */,
+				12B347ED1B10B10E00A8AC3D /* SWRevealViewController.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		12B347F01B10B6E100A8AC3D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12B347F11B10B70A00A8AC3D /* Dynamic content */,
+				12B347F21B10B72E00A8AC3D /* Controllers */,
+				12B3479C1B10B0AD00A8AC3D /* ActesTableViewController.swift */,
+				12B3479F1B10B0AD00A8AC3D /* ConfigurationViewController.swift */,
+				12B347A21B10B0AD00A8AC3D /* DetailsViewController.swift */,
+				12B347A31B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift */,
+				12B347A61B10B0AD00A8AC3D /* EtatCivilViewController.swift */,
+				12B347A71B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift */,
+				12B347A81B10B0AD00A8AC3D /* FullScreenRadioViewController.swift */,
+				12B347B71B10B0AD00A8AC3D /* RadioCollectionViewController.swift */,
+				12B347BB1B10B0AD00A8AC3D /* selectPratViewController.swift */,
+				129D28C41B1613EE00EF28FA /* CalendarViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12B347F11B10B70A00A8AC3D /* Dynamic content */ = {
+			isa = PBXGroup;
+			children = (
+				12B3479B1B10B0AD00A8AC3D /* ActesTableViewCell.swift */,
+				12B347A51B10B0AD00A8AC3D /* DocumentTableViewCell.swift */,
+				12B347B01B10B0AD00A8AC3D /* NewsTableViewCell.swift */,
+				12B347B61B10B0AD00A8AC3D /* RadioCollectionViewCell.swift */,
+				12B347BF1B10B0AD00A8AC3D /* TrackCell.swift */,
+			);
+			name = "Dynamic content";
+			sourceTree = "<group>";
+		};
+		12B347F21B10B72E00A8AC3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12B347A11B10B0AD00A8AC3D /* DetailNavigationController.swift */,
+				12B347BD1B10B0AD00A8AC3D /* TabBarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		12B347F31B10B73B00A8AC3D /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				12B347A91B10B0AD00A8AC3D /* Header.h */,
+				12B347BC1B10B0AD00A8AC3D /* SidebarMenu-Bridging-Header.h */,
+				12B347C01B10B0AD00A8AC3D /* ViewController.swift */,
+				12B347AD1B10B0AD00A8AC3D /* MapViewController.swift */,
+				12B347AE1B10B0AD00A8AC3D /* MenuController.swift */,
+				12B347AF1B10B0AD00A8AC3D /* model.swift */,
+				12B347B11B10B0AD00A8AC3D /* NewsTableViewController.swift */,
+				12B347B41B10B0AD00A8AC3D /* PhotoViewController.swift */,
+			);
+			name = Trash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +385,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B347311B109E3000A8AC3D /* Main.storyboard in Resources */,
-				12B347361B109E3000A8AC3D /* LaunchScreen.xib in Resources */,
-				12B347331B109E3000A8AC3D /* Images.xcassets in Resources */,
+				12B347D21B10B0AD00A8AC3D /* Info.plist in Resources */,
+				12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */,
+				12B347D11B10B0AD00A8AC3D /* Images.xcassets in Resources */,
+				12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +406,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B3472E1B109E3000A8AC3D /* ViewController.swift in Sources */,
-				12B3472C1B109E3000A8AC3D /* AppDelegate.swift in Sources */,
+				12B347C41B10B0AD00A8AC3D /* APIController.swift in Sources */,
+				12B347DB1B10B0AD00A8AC3D /* praticien.swift in Sources */,
+				12B347CF1B10B0AD00A8AC3D /* FullScreenRadioViewController.swift in Sources */,
+				12B347DA1B10B0AD00A8AC3D /* PhotoViewController.swift in Sources */,
+				12B347D61B10B0AD00A8AC3D /* NewsTableViewCell.swift in Sources */,
+				129D28B91B15F27000EF28FA /* MSCollectionViewCalendarLayout.m in Sources */,
+				12B347E41B10B0AD00A8AC3D /* TrackCell.swift in Sources */,
+				129D28BC1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m in Sources */,
+				12B347DE1B10B0AD00A8AC3D /* Reachability.swift in Sources */,
+				12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */,
+				12B347C31B10B0AD00A8AC3D /* ActesTableViewController.swift in Sources */,
+				12B347C91B10B0AD00A8AC3D /* DetailsViewController.swift in Sources */,
+				12B347D71B10B0AD00A8AC3D /* NewsTableViewController.swift in Sources */,
+				12B347C21B10B0AD00A8AC3D /* ActesTableViewCell.swift in Sources */,
+				12B347CD1B10B0AD00A8AC3D /* EtatCivilViewController.swift in Sources */,
+				12B347DD1B10B0AD00A8AC3D /* RadioCollectionViewController.swift in Sources */,
+				12B347E01B10B0AD00A8AC3D /* selectedUser.swift in Sources */,
+				12B347CC1B10B0AD00A8AC3D /* DocumentTableViewCell.swift in Sources */,
+				12B347CA1B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift in Sources */,
+				12B347C51B10B0AD00A8AC3D /* AppDelegate.swift in Sources */,
+				12B347CE1B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift in Sources */,
+				12B347D51B10B0AD00A8AC3D /* model.swift in Sources */,
+				12B347D91B10B0AD00A8AC3D /* patients.swift in Sources */,
+				129D28C51B1613EE00EF28FA /* CalendarViewController.swift in Sources */,
+				12B347DC1B10B0AD00A8AC3D /* RadioCollectionViewCell.swift in Sources */,
+				12B347D41B10B0AD00A8AC3D /* MenuController.swift in Sources */,
+				12B347C81B10B0AD00A8AC3D /* DetailNavigationController.swift in Sources */,
+				12B347CB1B10B0AD00A8AC3D /* Documents.swift in Sources */,
+				12B347C11B10B0AD00A8AC3D /* Actes.swift in Sources */,
+				12B347C61B10B0AD00A8AC3D /* ConfigurationViewController.swift in Sources */,
+				12B347E51B10B0AD00A8AC3D /* ViewController.swift in Sources */,
+				12B347C71B10B0AD00A8AC3D /* ConnexionString.swift in Sources */,
+				12B347E31B10B0AD00A8AC3D /* Track.swift in Sources */,
+				12B347DF1B10B0AD00A8AC3D /* SCLAlertView.swift in Sources */,
+				12B347D31B10B0AD00A8AC3D /* MapViewController.swift in Sources */,
+				12B347E11B10B0AD00A8AC3D /* selectPratViewController.swift in Sources */,
+				12B347E21B10B0AD00A8AC3D /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,20 +465,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		12B3472F1B109E3000A8AC3D /* Main.storyboard */ = {
+		12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				12B347301B109E3000A8AC3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		12B347341B109E3000A8AC3D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				12B347351B109E3000A8AC3D /* Base */,
+				12B347E71B10B0EB00A8AC3D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		12B347E81B10B0EB00A8AC3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B347E91B10B0EB00A8AC3D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,9 +571,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Oremia Mobile 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Oremia Mobile 2/Oremia Mobile 2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +584,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Oremia Mobile 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Oremia Mobile 2/Oremia Mobile 2-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +645,7 @@
 				12B347471B109E3000A8AC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12B347481B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "Oremia Mobile 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +654,7 @@
 				12B3474A1B109E3000A8AC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
