@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Oremia Mobile 2
+//  SidebarMenu
 //
-//  Created by Zumatec on 23/05/2015.
-//  Copyright (c) 2015 Zumatec. All rights reserved.
+//  Created by Simon Ng on 2/2/15.
+//  Copyright (c) 2015 AppCoda. All rights reserved.
 //
 
 import UIKit
