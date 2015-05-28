@@ -84,45 +84,62 @@ class RadioCollectionViewController: UICollectionViewController, UICollectionVie
         cell.backgroundColor = UIColor.blackColor()
         //cell.imageView.image = image
         // Configure the cell
-        cell.imageView?.image = UIImage(named: "photo")
+        let progressIndicatorView = CircularLoaderView(frame: CGRectZero)
+        
+//        cell.imageView?.image = UIImage(named: "photo")
         
         // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-        let urlString = "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+radio+as+image+from+radios+where+id=\(idr)&&db="+connexionString.db+"&&login="+connexionString.login+"&&pw="+connexionString.pw
-        // Check our image cache for the existing key. This is just a dictionary of UIImages
-        //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
-        var image = self.imageCache[urlString]
+        let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+radio+as+image+from+radios+where+id=\(idr)&&db="+connexionString.db+"&&login="+connexionString.login+"&&pw="+connexionString.pw)
         
-        
-        if( image == nil ) {
-            // If the image does not exist, we need to download it
-            var imgURL: NSURL = NSURL(string: urlString)!
-            
-            // Download an NSData representation of the image at the URL
-            let request: NSURLRequest = NSURLRequest(URL: imgURL)
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-                if error == nil {
-                    image = UIImage(data: data)
-                    
-                    // Store the image in to our cache
-                    self.imageCache[urlString] = image
-                    dispatch_async(dispatch_get_main_queue(), {
-                        if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? RadioCollectionViewCell {
-                            cellToUpdate.imageView?.image = image
-                        }
-                    })
-                }
-                else {
-                    println("Error: \(error.localizedDescription)")
-                }
-            })
+        cell.imageView?.sd_setImageWithURL(urlString, placeholderImage: nil, options: .CacheMemoryOnly, progress: {
+            [weak self]
+            (receivedSize, expectedSize) -> Void in
+                cell.imageView.addSubview(progressIndicatorView)
+                progressIndicatorView.frame = cell.imageView.bounds
+                progressIndicatorView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+                progressIndicatorView.progress = CGFloat(receivedSize)/CGFloat(expectedSize)
+            }) {
+                [weak self]
+                (image, error, _, _) -> Void in
+                //progressIndicatorView.progress = 0.9
+                //progressIndicatorView.frame = cell.imageView.bounds
+                progressIndicatorView.reveal()
         }
-        else {
-            dispatch_async(dispatch_get_main_queue(), {
-                if let cellToUpdate = self.cv.cellForItemAtIndexPath(indexPath) as? RadioCollectionViewCell{
-                    cellToUpdate.imageView?.image = image
-                }
-            })
-        }
+//        // Check our image cache for the existing key. This is just a dictionary of UIImages
+//        //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
+//        var image = self.imageCache[urlString]
+//        
+//        
+//        if( image == nil ) {
+//            // If the image does not exist, we need to download it
+//            var imgURL: NSURL = NSURL(string: urlString)!
+//            
+//            // Download an NSData representation of the image at the URL
+//            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+//            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+//                if error == nil {
+//                    image = UIImage(data: data)
+//                    
+//                    // Store the image in to our cache
+//                    self.imageCache[urlString] = image
+//                    dispatch_async(dispatch_get_main_queue(), {
+//                        if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? RadioCollectionViewCell {
+//                            cellToUpdate.imageView?.image = image
+//                        }
+//                    })
+//                }
+//                else {
+//                    println("Error: \(error.localizedDescription)")
+//                }
+//            })
+//        }
+//        else {
+//            dispatch_async(dispatch_get_main_queue(), {
+//                if let cellToUpdate = self.cv.cellForItemAtIndexPath(indexPath) as? RadioCollectionViewCell{
+//                    cellToUpdate.imageView?.image = image
+//                }
+//            })
+//        }
 
         return cell
     }

@@ -718,7 +718,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-10-LIE">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-10-LIE" customClass="AnimatableImageView" customModule="Oremia_Mobile_2" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                                         </imageView>
                                     </subviews>
@@ -731,7 +731,7 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="LJh-10-LIE" secondAttribute="bottom" id="leP-PU-yvv"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="LJh-10-LIE" id="gcX-B1-RXX"/>
+                                    <outlet property="imageView" destination="LJh-10-LIE" id="DHV-cm-Tdg"/>
                                     <segue destination="JKQ-j5-UCc" kind="show" id="sgG-ZJ-XrH"/>
                                 </connections>
                             </collectionViewCell>
@@ -1622,6 +1622,6 @@
         <image name="sprite" width="358" height="97"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="knL-Hf-Rh7"/>
+        <segue reference="Eie-Sz-EFJ"/>
     </inferredMetricsTieBreakers>
 </document>
