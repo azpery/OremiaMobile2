@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1223CBB91B187D0300A42C80 /* EtatCivilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223CBB81B187D0300A42C80 /* EtatCivilTableViewController.swift */; };
+		1223CBBB1B1884BC00A42C80 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223CBBA1B1884BC00A42C80 /* PickerViewController.swift */; };
+		1274F9241B1B6F52002FCF43 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9231B1B6F52002FCF43 /* date.swift */; };
+		1274F9261B1B7D2B002FCF43 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9251B1B7D2B002FCF43 /* SearchTableViewCell.swift */; };
+		1274F9281B1C72FD002FCF43 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9271B1C72FD002FCF43 /* ImageScrollViewController.swift */; };
+		127FE9051B1DFB9C0009B2E7 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FE9041B1DFB9C0009B2E7 /* ImageCollectionViewController.swift */; };
+		127FE9071B1E03610009B2E7 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FE9061B1E03610009B2E7 /* ImageViewController.swift */; };
+		127FE9091B2045D80009B2E7 /* EtatCivilNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FE9081B2045D80009B2E7 /* EtatCivilNavigationViewController.swift */; };
 		129D28B91B15F27000EF28FA /* MSCollectionViewCalendarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D28B81B15F27000EF28FA /* MSCollectionViewCalendarLayout.m */; };
 		129D28BC1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D28BB1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m */; };
 		129D28C51B1613EE00EF28FA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129D28C41B1613EE00EF28FA /* CalendarViewController.swift */; };
@@ -49,7 +57,6 @@
 		12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */; };
 		12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E81B10B0EB00A8AC3D /* Main.storyboard */; };
 		12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */; };
-		12CF398E1B17576A00883192 /* ajax-loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 12CF398D1B17576A00883192 /* ajax-loader.gif */; };
 		12CF39AA1B175F6A00883192 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A21B175F6A00883192 /* Animatable.swift */; };
 		12CF39AB1B175F6A00883192 /* AnimatableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A31B175F6A00883192 /* AnimatableImageView.swift */; };
 		12CF39AC1B175F6A00883192 /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A41B175F6A00883192 /* AnimatedFrame.swift */; };
@@ -102,6 +109,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1223CBB81B187D0300A42C80 /* EtatCivilTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatCivilTableViewController.swift; sourceTree = "<group>"; };
+		1223CBBA1B1884BC00A42C80 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		1274F9231B1B6F52002FCF43 /* date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
+		1274F9251B1B7D2B002FCF43 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1274F9271B1C72FD002FCF43 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
+		127FE9041B1DFB9C0009B2E7 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		127FE9061B1E03610009B2E7 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		127FE9081B2045D80009B2E7 /* EtatCivilNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatCivilNavigationViewController.swift; sourceTree = "<group>"; };
 		129D28B71B15F27000EF28FA /* MSCollectionViewCalendarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCollectionViewCalendarLayout.h; sourceTree = "<group>"; };
 		129D28B81B15F27000EF28FA /* MSCollectionViewCalendarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCollectionViewCalendarLayout.m; sourceTree = "<group>"; };
 		129D28BA1B15F2ED00EF28FA /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
@@ -154,7 +169,6 @@
 		12B347E91B10B0EB00A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		12B347ED1B10B10E00A8AC3D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		12CF398D1B17576A00883192 /* ajax-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader.gif"; sourceTree = "<group>"; };
 		12CF39A01B175F4600883192 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
 		12CF39A21B175F6A00883192 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		12CF39A31B175F6A00883192 /* AnimatableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableImageView.swift; sourceTree = "<group>"; };
@@ -227,6 +241,7 @@
 				12B347B51B10B0AD00A8AC3D /* praticien.swift */,
 				12B347BA1B10B0AD00A8AC3D /* selectedUser.swift */,
 				12B347BE1B10B0AD00A8AC3D /* Track.swift */,
+				1274F9231B1B6F52002FCF43 /* date.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -351,7 +366,8 @@
 				12B347B71B10B0AD00A8AC3D /* RadioCollectionViewController.swift */,
 				12B347BB1B10B0AD00A8AC3D /* selectPratViewController.swift */,
 				129D28C41B1613EE00EF28FA /* CalendarViewController.swift */,
-				12CF398D1B17576A00883192 /* ajax-loader.gif */,
+				1274F9271B1C72FD002FCF43 /* ImageScrollViewController.swift */,
+				127FE9041B1DFB9C0009B2E7 /* ImageCollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +381,7 @@
 				12B347B01B10B0AD00A8AC3D /* NewsTableViewCell.swift */,
 				12B347B61B10B0AD00A8AC3D /* RadioCollectionViewCell.swift */,
 				12B347BF1B10B0AD00A8AC3D /* TrackCell.swift */,
+				1274F9251B1B7D2B002FCF43 /* SearchTableViewCell.swift */,
 			);
 			name = "Dynamic content";
 			sourceTree = "<group>";
@@ -374,6 +391,10 @@
 			children = (
 				12B347A11B10B0AD00A8AC3D /* DetailNavigationController.swift */,
 				12B347BD1B10B0AD00A8AC3D /* TabBarViewController.swift */,
+				1223CBB81B187D0300A42C80 /* EtatCivilTableViewController.swift */,
+				1223CBBA1B1884BC00A42C80 /* PickerViewController.swift */,
+				127FE9061B1E03610009B2E7 /* ImageViewController.swift */,
+				127FE9081B2045D80009B2E7 /* EtatCivilNavigationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -535,7 +556,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B347D21B10B0AD00A8AC3D /* Info.plist in Resources */,
-				12CF398E1B17576A00883192 /* ajax-loader.gif in Resources */,
 				12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */,
 				12B347D11B10B0AD00A8AC3D /* Images.xcassets in Resources */,
 				12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */,
@@ -563,9 +583,11 @@
 				12CF39E31B1789D100883192 /* SDWebImageManager.m in Sources */,
 				12B347CF1B10B0AD00A8AC3D /* FullScreenRadioViewController.swift in Sources */,
 				12B347DA1B10B0AD00A8AC3D /* PhotoViewController.swift in Sources */,
+				1274F9241B1B6F52002FCF43 /* date.swift in Sources */,
 				12B347D61B10B0AD00A8AC3D /* NewsTableViewCell.swift in Sources */,
 				129D28B91B15F27000EF28FA /* MSCollectionViewCalendarLayout.m in Sources */,
 				12B347E41B10B0AD00A8AC3D /* TrackCell.swift in Sources */,
+				1274F9281B1C72FD002FCF43 /* ImageScrollViewController.swift in Sources */,
 				129D28BC1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m in Sources */,
 				12B347DE1B10B0AD00A8AC3D /* Reachability.swift in Sources */,
 				12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */,
@@ -581,18 +603,23 @@
 				12B347CC1B10B0AD00A8AC3D /* DocumentTableViewCell.swift in Sources */,
 				12B347CA1B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift in Sources */,
 				12B347C51B10B0AD00A8AC3D /* AppDelegate.swift in Sources */,
+				1223CBBB1B1884BC00A42C80 /* PickerViewController.swift in Sources */,
+				1274F9261B1B7D2B002FCF43 /* SearchTableViewCell.swift in Sources */,
 				12CF39E51B1789D100883192 /* UIButton+WebCache.m in Sources */,
 				12CF39E81B1789D100883192 /* UIImageView+HighlightedWebCache.m in Sources */,
 				12B347CE1B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift in Sources */,
 				12B347D51B10B0AD00A8AC3D /* model.swift in Sources */,
 				12CF39E91B1789D100883192 /* UIImageView+WebCache.m in Sources */,
 				12CF39EC1B178A0900883192 /* CircularLoaderView.swift in Sources */,
+				127FE9091B2045D80009B2E7 /* EtatCivilNavigationViewController.swift in Sources */,
+				127FE9051B1DFB9C0009B2E7 /* ImageCollectionViewController.swift in Sources */,
 				12CF39DE1B1789D100883192 /* SDImageCache.m in Sources */,
 				12CF39DF1B1789D100883192 /* SDWebImageCompat.m in Sources */,
 				12B347D91B10B0AD00A8AC3D /* patients.swift in Sources */,
 				12CF39E41B1789D100883192 /* SDWebImagePrefetcher.m in Sources */,
 				12CF39E71B1789D100883192 /* UIImage+MultiFormat.m in Sources */,
 				12CF39E01B1789D100883192 /* SDWebImageDecoder.m in Sources */,
+				1223CBB91B187D0300A42C80 /* EtatCivilTableViewController.swift in Sources */,
 				129D28C51B1613EE00EF28FA /* CalendarViewController.swift in Sources */,
 				12CF39AE1B175F6A00883192 /* Curry.swift in Sources */,
 				12B347DC1B10B0AD00A8AC3D /* RadioCollectionViewCell.swift in Sources */,
@@ -614,6 +641,7 @@
 				12B347E11B10B0AD00A8AC3D /* selectPratViewController.swift in Sources */,
 				12CF39E11B1789D100883192 /* SDWebImageDownloader.m in Sources */,
 				12CF39EA1B1789D100883192 /* UIView+WebCacheOperation.m in Sources */,
+				127FE9071B1E03610009B2E7 /* ImageViewController.swift in Sources */,
 				12B347E21B10B0AD00A8AC3D /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

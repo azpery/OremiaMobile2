@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DC49539B-1310-468C-9822-4BF43DE16A84</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Oremia Mobile 2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>934AF4231EF7C4B108F241FEEDB5E29FA260C28A</key>
 		<string>https://github.com/azpery/OremiaMobile2</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Oremia Mobile 2.xcodeproj/project.xcworkspace</string>
+	<string>Oremia Mobile 2.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>934AF4231EF7C4B108F241FEEDB5E29FA260C28A</key>

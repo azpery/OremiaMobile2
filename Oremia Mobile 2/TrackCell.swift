@@ -9,6 +9,10 @@
 import UIKit
 class TrackCell:UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var playIcon: UILabel!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var Adresse: UILabel!
+    @IBOutlet weak var tel: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
     
 }

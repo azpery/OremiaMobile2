@@ -1,14 +1,15 @@
 //
-//  DetailNavigationController.swift
+//  ImageViewController.swift
 //  Oremia Mobile 2
 //
-//  Created by Zumatec on 20/05/2015.
-//  Copyright (c) 2015 AppCoda. All rights reserved.
+//  Created by Zumatec on 02/06/2015.
+//  Copyright (c) 2015 Zumatec. All rights reserved.
 //
 
 import UIKit
 
-class DetailNavigationController: UINavigationController {
+class ImageViewController: UINavigationController {
+    var patient:patients?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,7 @@ class DetailNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func unwindToSelectPatient(segue: UIStoryboardSegue) {
-        self.reloadInputViews()
-    }
+    
 
     /*
     // MARK: - Navigation

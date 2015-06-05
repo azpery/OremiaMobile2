@@ -9,8 +9,8 @@
 import UIKit
 
 class selectPratViewController: UIViewController, UIScrollViewDelegate, APIControllerProtocol{
-
-
+    
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var btnConnexion: UIButton!
@@ -57,28 +57,28 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
         // Load the pages that are now on screen
         println("yolo")
         if(!UIApplication.sharedApplication().networkActivityIndicatorVisible){
-        loadVisiblePages()
+            loadVisiblePages()
         }
     }
     func loadPage(page: Int) {
         if page < 0 || page >= self.praticiens.count {
             return
         }
-                    var frame = scrollView.bounds
-            frame.origin.x = frame.size.width * CGFloat(page)
-            frame.origin.y = 0.0
-            let newPageView = UIButton(frame: CGRectMake(100, 100, 100, 50))
-            newPageView.backgroundColor=UIColor.orangeColor()
-            if (self.praticiens[0].id != 0) {
-                newPageView.setTitle("Dr "+self.praticiens[page].prenom+" "+self.praticiens[page].nom, forState: UIControlState.Normal)
-            } else {
-                newPageView.setTitle("Serveur Introuvable", forState: UIControlState.Normal)
-            }
-            newPageView.contentMode = .ScaleAspectFit
-            newPageView.frame = frame
-            scrollView.addSubview(newPageView)
+        var frame = scrollView.bounds
+        frame.origin.x = frame.size.width * CGFloat(page)
+        frame.origin.y = 0.0
+        let newPageView = UIButton(frame: CGRectMake(100, 100, 100, 50))
+        newPageView.backgroundColor=UIColor.orangeColor()
+        if (self.praticiens[0].id != 0) {
+            newPageView.setTitle("Dr "+self.praticiens[page].prenom+" "+self.praticiens[page].nom, forState: UIControlState.Normal)
+        } else {
+            newPageView.setTitle(self.praticiens[page].nom, forState: UIControlState.Normal)
+        }
+        newPageView.contentMode = .ScaleAspectFit
+        newPageView.frame = frame
+        scrollView.addSubview(newPageView)
         
-            pageViews[page] = newPageView
+        pageViews[page] = newPageView
     }
     func purgePage(page: Int) {
         if page < 0 || page >= self.praticiens.count{
@@ -150,9 +150,9 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
                     preference.password = self.mdp!
                     connexionString.login = "zm\(self.selectedPrat!.id)"
                     connexionString.pw=self.mdp!
-                self.performSegueWithIdentifier("connectionGranted", sender:self)
+                    self.performSegueWithIdentifier("connectionGranted", sender:self)
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                    })
+                })
             }
         }else if type == 2{
             dispatch_async(dispatch_get_main_queue(), {
@@ -163,24 +163,35 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
             })
             
         } else {
-        dispatch_async(dispatch_get_main_queue(), {
-            self.praticiens = Praticien.praticienWithJSON(resultsArr)
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            self.initScroll()
-            self.loadVisiblePages()
-        })
+            dispatch_async(dispatch_get_main_queue(), {
+                self.praticiens = Praticien.praticienWithJSON(resultsArr)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                self.initScroll()
+                self.loadVisiblePages()
+            })
         }
     }
     func handleError(results: Int) {
         dispatch_async(dispatch_get_main_queue(), {
-        if results == 1{
-//            SCLAlertView().showError("Serveur introuvable", subTitle: "Veuillez rentrer une adresse ip de serveur correct", closeButtonTitle:"Fermer", duration: 800)
-            self.praticiens.removeAll(keepCapacity: false)
-            self.praticiens.append(Praticien(id: 0, nom:"Serveur introuvable", prenom: ""))
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            self.initScroll()
-            self.loadVisiblePages()
-        }
+            switch results {
+            case 1 :
+                    //            SCLAlertView().showError("Serveur introuvable", subTitle: "Veuillez rentrer une adresse ip de serveur correct", closeButtonTitle:"Fermer", duration: 800)
+                    self.praticiens.removeAll(keepCapacity: false)
+                    self.praticiens.append(Praticien(id: 0, nom:"Serveur introuvable", prenom: ""))
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    self.initScroll()
+                    self.loadVisiblePages()
+            case 2 :
+                    self.praticiens.removeAll(keepCapacity: false)
+                    self.praticiens.append(Praticien(id: 0, nom:"Fichier(s) manquant", prenom: ""))
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    self.initScroll()
+                    self.loadVisiblePages()
+                    self.scrollView.reloadInputViews()
+            default :
+                    println("exception non gérée")
+                
+            }
         })
     }
 }

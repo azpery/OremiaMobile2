@@ -36,8 +36,6 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         self.tracksTableView.reloadData()
-//        logOut.target = self
-//        logOut.action = "logOutPressed"
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchActive {
@@ -45,8 +43,6 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             return tracks.count
         }
-        
-
     }
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
@@ -82,29 +78,60 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.performSegueWithIdentifier("logOutSegue", sender:self)
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tracksTableView.dequeueReusableCellWithIdentifier("TrackCell") as! TrackCell
+        let dcell = tracksTableView.dequeueReusableCellWithIdentifier("SearchCell") as! UITableViewCell
         var track:patients
         if searchActive {
+            var cell = tracksTableView.dequeueReusableCellWithIdentifier("SearchCell") as! SearchTableViewCell
             track  = filtredpatients[indexPath.row]
+            cell.label.text = "Prénom : "+track.prenom+" Nom : "+track.nom
+            return cell
         } else {
+            var cell = tracksTableView.dequeueReusableCellWithIdentifier("TrackCell") as! TrackCell
             track = tracks[indexPath.row]
-            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            var ddate = dateFormatter.dateFromString(track.dateNaissance)
+            //        dateFormatter.dateFormat = "yyyy"
+            let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+            let date = NSDate()
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+            let year = components.year as Int
+            let dyear =  NSCalendar.currentCalendar().components(flags, fromDate: ddate!).year as Int
+            //        var a = dateFormatter.stringFromDate(NSDate())
+            //        var auj = NSDate().dateFromString(a, format: "yyyy")
+            let dage = year - dyear
+            cell.age.text = "Age : \(dage) ans"
+            cell.Adresse.text = "Adresse : "+renseigner(track.adresse)+" "+track.codePostal+" "+track.ville
+            cell.email.text = "email : "+renseigner(track.email)
+            cell.tel.text = "N° tel. : "+renseigner(track.telephone1)
+            cell.titleLabel.text = "Prénom : "+track.prenom+" Nom : "+track.nom
+            println(NSDate())
+            cell.avatar.contentMode = .ScaleAspectFit
+            let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(track.idPhoto)&&db=zuma&&login=zm501&&pw=zuma")
+            cell.avatar.sd_setImageWithURL(urlString, placeholderImage: nil, options: .CacheMemoryOnly, progress: {
+                [weak self]
+                (receivedSize, expectedSize) -> Void in
+                    cell.avatar.image = track.photo
+                }) {
+                    [weak self]
+                    (image, error, _, _) -> Void in
+                    cell.avatar.image = image
+                    track.photo = image
+                }
+            //cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
         }
-        cell.titleLabel.text = track.prenom+" "+track.nom
-        cell.imageView?.image = track.photo
-        
-        return cell
+        return dcell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var track = tracks[indexPath.row]
     }
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if !searchActive{
-        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animateWithDuration(0.25, animations: {
-            cell.layer.transform = CATransform3DMakeScale(1,1,1)
-        })
+    func renseigner(text:String) -> String{
+        var vretour = text
+        if text == "" {
+            vretour = "Non renseigné"
         }
+        return vretour
     }
     func didReceiveAPIResults(results: NSDictionary) {
         var resultsArr: NSArray = results["results"] as! NSArray

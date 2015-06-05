@@ -22,11 +22,11 @@ class Praticien {
         var praticien = [Praticien]()
         if allResults.count>0 {
             for result in allResults {
-                var id = result["id"] as? Int
-                let nom = result["nom"] as? String
-                let prenom = result["prenom"] as? String
+                var id : Int = result["id"] as? Int ?? 0
+                let nom = result["nom"] as? String ?? ""
+                let prenom = result["prenom"] as? String ?? ""
 
-                var newAlbum = Praticien(id: id!, nom: nom!, prenom: prenom!)
+                var newAlbum = Praticien(id: id, nom: nom, prenom: prenom)
                 praticien.append(newAlbum)
             }
         }

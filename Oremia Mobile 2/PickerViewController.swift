@@ -1,15 +1,16 @@
 //
-//  DetailNavigationController.swift
+//  PickerViewController.swift
 //  Oremia Mobile 2
 //
-//  Created by Zumatec on 20/05/2015.
-//  Copyright (c) 2015 AppCoda. All rights reserved.
+//  Created by Zumatec on 29/05/2015.
+//  Copyright (c) 2015 Zumatec. All rights reserved.
 //
 
 import UIKit
 
-class DetailNavigationController: UINavigationController {
-
+class PickerViewController: UIViewController {
+    var colors = ["Red","Yellow","Green","Blue"]
+    @IBOutlet weak var p: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,10 +21,17 @@ class DetailNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func unwindToSelectPatient(segue: UIStoryboardSegue) {
-        self.reloadInputViews()
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
-
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return colors.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return colors[row]
+    }
     /*
     // MARK: - Navigation
 

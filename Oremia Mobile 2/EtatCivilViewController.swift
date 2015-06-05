@@ -7,25 +7,31 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class EtatCivilViewController: UIViewController, APIControllerProtocol {
+
+class EtatCivilViewController: UIViewController, APIControllerProtocol, UIImagePickerControllerDelegate, UIAlertViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profilePicture: UIImageView!
     var api = APIController?()
     var patient = patients?()
+    var cameraUI:UIImagePickerController = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
         api = APIController(delegate: self)
-        api = APIController(delegate: self)
         var tb : TabBarViewController = self.tabBarController as! TabBarViewController
         patient = tb.patient!
-        profilePicture.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(self.patient!.idPhoto)&&db=zuma&&login=zm501&&pw=zuma")!)!)
+        profilePicture.contentMode = .ScaleAspectFit
+        profilePicture.image = patient?.photo
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func prendrePhoto(sender: AnyObject) {
+        self.presentCamera()
     }
     
 
@@ -50,6 +56,58 @@ class EtatCivilViewController: UIViewController, APIControllerProtocol {
         }
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier=="embedTable"){
+            var detailsViewController: EtatCivilTableViewController = segue.destinationViewController as! EtatCivilTableViewController
+            var tb : TabBarViewController = self.tabBarController as! TabBarViewController
+            patient = tb.patient!
+            detailsViewController.p = patient!
+        }
+        if(segue.identifier=="selectImage"){
+            var ImageCollection: ImageViewController = segue.destinationViewController as! ImageViewController
+            var tb : TabBarViewController = self.tabBarController as! TabBarViewController
+            patient = tb.patient!
+            ImageCollection.patient = patient!
+        }
+    }
+    func presentCamera()
+    {
+        cameraUI = UIImagePickerController()
+        cameraUI.delegate = self
+        cameraUI.sourceType = UIImagePickerControllerSourceType.Camera
+        cameraUI.mediaTypes = [kUTTypeImage]
+        cameraUI.allowsEditing = true
+        cameraUI.navigationItem.title = "kikou"
+        
+        self.presentViewController(cameraUI, animated: true, completion: nil)
+    }
+    
+
+    //pragma mark- Image
+    
+    func imagePickerControllerDidCancel(picker:UIImagePickerController)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+//        var mediaType:String = editingInfo[UIImagePickerControllerEditedImage] as! String
+        var imageToSave:UIImage
+        
+        imageToSave = image
+        UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.profilePicture.image = imageToSave
+        self.patient?.photo = image
+        api?.insertImage(image, idPatient: self.patient!.id)
+    }
+    
+    
+    func alertView(alertView: UIAlertView!, didDismissWithButtonIndex buttonIndex: Int)
+    {
+        NSLog("Did dismiss button: %d", buttonIndex)
+        //self.presentCamera()
     }
 
 }

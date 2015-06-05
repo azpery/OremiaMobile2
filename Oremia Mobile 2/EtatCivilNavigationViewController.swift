@@ -1,28 +1,31 @@
 //
-//  DetailNavigationController.swift
+//  EtatCivilNavigationViewController.swift
 //  Oremia Mobile 2
 //
-//  Created by Zumatec on 20/05/2015.
-//  Copyright (c) 2015 AppCoda. All rights reserved.
+//  Created by Zumatec on 04/06/2015.
+//  Copyright (c) 2015 Zumatec. All rights reserved.
 //
 
 import UIKit
 
-class DetailNavigationController: UINavigationController {
-
+class EtatCivilNavigationViewController: UINavigationController {
+    var profilePicture : UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func unwindToEtatCivil(segue: UIStoryboardSegue) {
+        let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+        let nexRootView = self.navigationController?.viewControllers.count
+        println(nexRootView)
+        //nexRootView.profilePicture.image = profilePicture
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func unwindToSelectPatient(segue: UIStoryboardSegue) {
-        self.reloadInputViews()
-    }
+    
 
     /*
     // MARK: - Navigation

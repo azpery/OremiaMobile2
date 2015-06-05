@@ -10,5 +10,6 @@ import UIKit
 
 class RadioCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: AnimatableImageView!
+    @IBOutlet weak var label: UILabel!
     
 }
