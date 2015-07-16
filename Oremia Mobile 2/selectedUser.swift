@@ -13,5 +13,5 @@ class selectedUser {
      var nomUser=""
      var prenomUser=""
      var password="zuma"
-     var ipServer="192.168.0.5"
+     var ipServer="localhost"
 }

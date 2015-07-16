@@ -27,7 +27,9 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
         super.viewDidLoad()
         api = APIController(delegate: self)
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        api!.sendRequest("select id,nom,prenom from praticiens")
+        api!.selectpraticien()
+        
+        //api!.sendRequest("select id,nom,prenom from praticiens")
         btnConnexion.addTarget(self, action: "clicked", forControlEvents: UIControlEvents.TouchUpInside)
     }
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,8 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
         // Dispose of any resources that can be recreated.
     }
     @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
-        api!.sendRequest("select id,nom,prenom from praticiens")
+        api!.selectpraticien()
+        //api!.sendRequest("select id,nom,prenom from praticiens")
     }
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         
@@ -137,6 +140,9 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
                 type = 0
                 nb = value["correct"] as? Int
             }
+            if value.objectForKey("connexionBegin") !=  nil{
+                self.performSegueWithIdentifier("connectionGranted", sender:self)
+            }
             if value.objectForKey("error") !=  nil && value["error"] as? Int == 7{
                 type = 2
             }
@@ -150,7 +156,7 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
                     preference.password = self.mdp!
                     connexionString.login = "zm\(self.selectedPrat!.id)"
                     connexionString.pw=self.mdp!
-                    self.performSegueWithIdentifier("connectionGranted", sender:self)
+                    self.api!.setConnexion()
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 })
             }

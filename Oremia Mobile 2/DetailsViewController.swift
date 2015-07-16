@@ -29,7 +29,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Bienvenue "+preference.nomUser+" "+preference.prenomUser
-        api.sendRequest("select * from patients where idpraticien=\(preference.idUser)")
+        api.sendRequest("select * from patients where idpraticien=\(preference.idUser) LIMIT 50")
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -100,14 +100,18 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
             //        var a = dateFormatter.stringFromDate(NSDate())
             //        var auj = NSDate().dateFromString(a, format: "yyyy")
             let dage = year - dyear
-            cell.age.text = "Age : \(dage) ans"
-            cell.Adresse.text = "Adresse : "+renseigner(track.adresse)+" "+track.codePostal+" "+track.ville
-            cell.email.text = "email : "+renseigner(track.email)
-            cell.tel.text = "N° tel. : "+renseigner(track.telephone1)
-            cell.titleLabel.text = "Prénom : "+track.prenom+" Nom : "+track.nom
+            cell.age.text = "\(dage) ans"
+            cell.Adresse.text = ""+renseigner(track.adresse)+" "+track.codePostal+""+track.ville
+            cell.email.text = ""+renseigner(track.email)
+            cell.tel.text = ""+renseigner(track.telephone1)
+            cell.titleLabel.text = ""+track.prenom+" "+track.nom
             println(NSDate())
+            cell.avatar.layer.cornerRadius = cell.avatar.frame.size.width / 2;
+            cell.avatar.clipsToBounds = true
+            cell.avatar.layer.borderWidth = 0.5
+            cell.avatar.layer.borderColor = UIColor.whiteColor().CGColor
             cell.avatar.contentMode = .ScaleAspectFit
-            let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(track.idPhoto)&&db=zuma&&login=zm501&&pw=zuma")
+            let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(track.idPhoto)&&db=zuma&&login=zm\(preference.idUser)&&pw=\(preference.password)")
             cell.avatar.sd_setImageWithURL(urlString, placeholderImage: nil, options: .CacheMemoryOnly, progress: {
                 [weak self]
                 (receivedSize, expectedSize) -> Void in

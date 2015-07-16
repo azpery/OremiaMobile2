@@ -64,7 +64,7 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! RadioCollectionViewCell
         var idr:Int = idRadio?.objectAtIndex(indexPath.row).valueForKey("id") as! Int
         //var image = api!.getRadioFromUrl(idr)
-        cell.backgroundColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.clearColor()
         var datec = " Date de création :"
         datec += dateCrea!.objectAtIndex(indexPath.row).valueForKey("date") as! String
         cell.label.text = datec
@@ -72,8 +72,7 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         // Configure the cell
         let progressIndicatorView = CircularLoaderView(frame: CGRectZero)
         let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(idr)&&db="+connexionString.db+"&&login="+connexionString.login+"&&pw="+connexionString.pw)
-        
-        cell.imageView?.sd_setImageWithURL(urlString, placeholderImage: nil, options: .CacheMemoryOnly, progress: {
+        cell.imageView?.sd_setImageWithURL(urlString, placeholderImage: UIImage(named: "photo"), options: .CacheMemoryOnly, progress: {
             [weak self]
             (receivedSize, expectedSize) -> Void in
             cell.imageView.addSubview(progressIndicatorView)
@@ -128,15 +127,18 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
     }
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
             var idr:Int = idRadio?.objectAtIndex(indexPath.row).valueForKey("id") as! Int
-            //selectedPhoto = api!.getRadioFromUrl(idr)
+        let cell:RadioCollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! RadioCollectionViewCell
+            self.selectedPhoto = cell.imageView.image
+        
             self.performSegueWithIdentifier("unWind", sender: self)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.destinationViewController.isKindOfClass(EtatCivilNavigationViewController) && self.cv.indexPathsForSelectedItems()[0].row != nil ){
+        if (segue.destinationViewController.isKindOfClass(EtatCivilNavigationViewController) && self.cv.indexPathsForSelectedItems().count != 0 ){
             var fullScreenView: EtatCivilNavigationViewController = segue.destinationViewController as! EtatCivilNavigationViewController
-            fullScreenView.profilePicture = self.imageCache[self.cv.indexPathsForSelectedItems()[0].row]
+            fullScreenView.profilePicture = self.selectedPhoto
             let idr = idRadio?.objectAtIndex(self.cv.indexPathsForSelectedItems()[0].row).valueForKey("id") as! Int
-            api!.sendRequest("UPDATE patients SET idphoto = \(idr) where id=\(patient!.id)")
+            api!.sendInsert("UPDATE patients SET idphoto = \(idr) where id=\(patient!.id)")
+            patient?.idPhoto=idr
         }
     }
     

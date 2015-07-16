@@ -21,9 +21,10 @@ class DetailNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func unwindToSelectPatient(segue: UIStoryboardSegue) {
-        self.reloadInputViews()
+        let rootView = self.topViewController as! DetailsViewController
+        rootView.tracksTableView.reloadData()
     }
-
+    
     /*
     // MARK: - Navigation
 

@@ -21,8 +21,19 @@ class EtatCivilViewController: UIViewController, APIControllerProtocol, UIImageP
         api = APIController(delegate: self)
         var tb : TabBarViewController = self.tabBarController as! TabBarViewController
         patient = tb.patient!
-        profilePicture.contentMode = .ScaleAspectFit
-        profilePicture.image = patient?.photo
+        if profilePicture != nil {
+            profilePicture.contentMode = .ScaleAspectFit
+            let urlString = NSURL(string: "http://\(preference.ipServer)/scripts/OremiaMobileHD/image.php?query=select+image+from+images+where+id=\(patient!.idPhoto)&&db=zuma&&login=zm\(preference.idUser)&&pw=\(preference.password)")
+            profilePicture.sd_setImageWithURL(urlString, placeholderImage: UIImage(named: "photo"), options: .CacheMemoryOnly, progress: {
+                [weak self]
+                (receivedSize, expectedSize) -> Void in
+                    self!.profilePicture.image = self!.patient?.photo
+                }) {
+                    [weak self]
+                    (image, error, _, _) -> Void in
+                    self!.profilePicture.image = image
+                    self!.patient!.photo = image
+            }        }
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +44,9 @@ class EtatCivilViewController: UIViewController, APIControllerProtocol, UIImageP
     @IBAction func prendrePhoto(sender: AnyObject) {
         self.presentCamera()
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     /*
     // MARK: - Navigation
@@ -104,7 +117,7 @@ class EtatCivilViewController: UIViewController, APIControllerProtocol, UIImageP
     }
     
     
-    func alertView(alertView: UIAlertView!, didDismissWithButtonIndex buttonIndex: Int)
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int)
     {
         NSLog("Did dismiss button: %d", buttonIndex)
         //self.presentCamera()

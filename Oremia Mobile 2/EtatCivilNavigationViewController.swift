@@ -16,10 +16,11 @@ class EtatCivilNavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     @IBAction func unwindToEtatCivil(segue: UIStoryboardSegue) {
-        let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
-        let nexRootView = self.navigationController?.viewControllers.count
-        println(nexRootView)
-        //nexRootView.profilePicture.image = profilePicture
+        if self.profilePicture != nil{
+        let rootView = self.topViewController as! EtatCivilViewController
+        rootView.profilePicture.image = profilePicture
+        //showViewController(EtatCivilViewController(), sender: self)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

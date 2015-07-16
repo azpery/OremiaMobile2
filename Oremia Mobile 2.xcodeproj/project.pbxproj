@@ -57,6 +57,10 @@
 		12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */; };
 		12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E81B10B0EB00A8AC3D /* Main.storyboard */; };
 		12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */; };
+		12C266DF1B4D278D00BA4C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266DE1B4D278D00BA4C5A /* MapKit.framework */; };
+		12C266E01B4D27A600BA4C5A /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266DE1B4D278D00BA4C5A /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12C266E41B4D296000BA4C5A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266E31B4D296000BA4C5A /* ImageIO.framework */; };
+		12C266E51B4D296500BA4C5A /* ImageIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266E31B4D296000BA4C5A /* ImageIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12CF39AA1B175F6A00883192 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A21B175F6A00883192 /* Animatable.swift */; };
 		12CF39AB1B175F6A00883192 /* AnimatableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A31B175F6A00883192 /* AnimatableImageView.swift */; };
 		12CF39AC1B175F6A00883192 /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A41B175F6A00883192 /* AnimatedFrame.swift */; };
@@ -66,7 +70,6 @@
 		12CF39B01B175F6A00883192 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A91B175F6A00883192 /* UIImageExtension.swift */; };
 		12CF39B61B1764CF00883192 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CF39A01B175F4600883192 /* Runes.framework */; };
 		12CF39B71B1764CF00883192 /* Runes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12CF39A01B175F4600883192 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		12CF39BE1B17899E00883192 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CF39BD1B17899E00883192 /* ImageIO.framework */; };
 		12CF39DD1B1789D100883192 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C11B1789D000883192 /* NSData+ImageContentType.m */; };
 		12CF39DE1B1789D100883192 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C31B1789D000883192 /* SDImageCache.m */; };
 		12CF39DF1B1789D100883192 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C51B1789D000883192 /* SDWebImageCompat.m */; };
@@ -101,6 +104,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				12C266E51B4D296500BA4C5A /* ImageIO.framework in Embed Frameworks */,
+				12C266E01B4D27A600BA4C5A /* MapKit.framework in Embed Frameworks */,
 				12CF39B71B1764CF00883192 /* Runes.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -169,6 +174,8 @@
 		12B347E91B10B0EB00A8AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		12B347ED1B10B10E00A8AC3D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		12C266DE1B4D278D00BA4C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		12C266E31B4D296000BA4C5A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		12CF39A01B175F4600883192 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
 		12CF39A21B175F6A00883192 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		12CF39A31B175F6A00883192 /* AnimatableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableImageView.swift; sourceTree = "<group>"; };
@@ -178,7 +185,6 @@
 		12CF39A71B175F6A00883192 /* Gifu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gifu.h; sourceTree = "<group>"; };
 		12CF39A81B175F6A00883192 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSourceHelpers.swift; sourceTree = "<group>"; };
 		12CF39A91B175F6A00883192 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		12CF39BD1B17899E00883192 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageIO.framework; sourceTree = "<group>"; };
 		12CF39C01B1789D000883192 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		12CF39C11B1789D000883192 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		12CF39C21B1789D000883192 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -216,7 +222,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12CF39BE1B17899E00883192 /* ImageIO.framework in Frameworks */,
+				12C266E41B4D296000BA4C5A /* ImageIO.framework in Frameworks */,
+				12C266DF1B4D278D00BA4C5A /* MapKit.framework in Frameworks */,
 				12CF39B61B1764CF00883192 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +424,8 @@
 		12CF399F1B175F2E00883192 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12CF39BD1B17899E00883192 /* ImageIO.framework */,
+				12C266E31B4D296000BA4C5A /* ImageIO.framework */,
+				12C266DE1B4D278D00BA4C5A /* MapKit.framework */,
 				12CF39A01B175F4600883192 /* Runes.framework */,
 			);
 			name = Frameworks;

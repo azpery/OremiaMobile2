@@ -10,7 +10,7 @@ import UIKit
 
 class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate {
     var p:patients?
-    var hazards = ["Monsieur","Madame", "Mademoiselle"]
+    var hazards = ["", "Monsieur","Madame", "Mademoiselle", "Enfant"]
     var pickerView1: UIPickerView!
     @IBOutlet weak var c: UITextField!
     @IBOutlet weak var nom: UITextField!
@@ -33,7 +33,7 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
         var item = UIBarButtonItem(title: "OK", style: UIBarButtonItemStyle.Plain, target: self, action: "doneAction")
         item.title = "OK"
         toolbar.setItems([item], animated: true)
-        c.text = "\(p!.civilite)"
+        c.text = hazards[p!.civilite]
         c.inputView = pickerView1
         c.inputAccessoryView = toolbar
         nom.text = p!.nom
@@ -48,8 +48,10 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
         pr.text = p!.profession
         em.text = p!.email
         self.tableView.scrollsToTop = true
+        
 
     }
+    
     func doneAction() {
         self.c.resignFirstResponder()
         println("done!")
@@ -71,11 +73,8 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
             return hazards[row]
-
     }
-    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
         c.text = hazards[row]
-
     }
 }

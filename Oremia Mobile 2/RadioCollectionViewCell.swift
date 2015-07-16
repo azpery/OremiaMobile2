@@ -9,7 +9,7 @@
 import UIKit
 
 class RadioCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: AnimatableImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
 }
