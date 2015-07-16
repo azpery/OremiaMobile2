@@ -8,8 +8,9 @@
 
 import UIKit
 
-class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate {
+class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate, APIControllerProtocol {
     var p:patients?
+    var api = APIController?()
     var hazards = ["", "Monsieur","Madame", "Mademoiselle", "Enfant"]
     var pickerView1: UIPickerView!
     @IBOutlet weak var c: UITextField!
@@ -26,7 +27,9 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
     @IBOutlet weak var em: UITextField!
     @IBOutlet weak var pr: UITextField!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        api = APIController(delegate: self)
         pickerView1 = UIPickerView()
         pickerView1.delegate = self
         var toolbar = UIToolbar(frame: CGRectMake(0, 0, self.view.bounds.size.width, 44))
@@ -51,6 +54,9 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
         
 
     }
+//    override func viewDidDisappear(animated: Bool){
+//        api!.sendInsert("UPDATE patients SET nir=DEFAULT, genre=\(p!.civilite), nom=\(p!.nom), prenom=\(p!.prenom), adresse=?, codepostal=?, ville=?, telephone1=?, telephone2=?, email=?, naissance=?, creation=?,idpraticien=?, idphoto=?, info=?, autorise_sms=?, correspondant=?,ipp2=?, adresse2=?, patient_par=?, amc=?, amc_prefs=?, profession=?,correspondants=?, statut=?, famille=?, tel1_info=?, tel2_info=? WHERE id =\(p!.id);")
+//    }
     
     func doneAction() {
         self.c.resignFirstResponder()
@@ -73,8 +79,21 @@ class EtatCivilTableViewController: UITableViewController, UIPickerViewDelegate 
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
             return hazards[row]
+        if row == hazards.count {
+            pickerView1.selectRow(p!.civilite, inComponent: 1, animated: true)
+        }
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
         c.text = hazards[row]
+    }
+    func didReceiveAPIResults(results: NSDictionary) {
+        
+    }
+    func handleError(results: Int) {
+        if results == 1{
+            SCLAlertView().showError("Serveur introuvable", subTitle: "Veuillez rentrer une adresse ip de serveur correct", closeButtonTitle:"Fermer")
+        }
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        
     }
 }
