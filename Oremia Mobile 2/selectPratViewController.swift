@@ -3,7 +3,7 @@
 //  Oremia Mobile 2
 //
 //  Created by Zumatec on 07/05/2015.
-//  Copyright (c) 2015 AppCoda. All rights reserved.
+//  Copyright (c) 2015 Zumatec. All rights reserved.
 //
 
 import UIKit
@@ -26,11 +26,17 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
     override func viewDidLoad() {
         super.viewDidLoad()
         api = APIController(delegate: self)
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        api!.selectpraticien()
+        //UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        //api!.selectpraticien()
         
         //api!.sendRequest("select id,nom,prenom from praticiens")
-        btnConnexion.addTarget(self, action: "clicked", forControlEvents: UIControlEvents.TouchUpInside)
+        //btnConnexion.addTarget(self, action: "clicked", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    override func viewDidAppear(animated: Bool) {
+            api!.selectpraticien()
+            //api!.sendRequest("select id,nom,prenom from praticiens")
+            btnConnexion.addTarget(self, action: "clicked", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -185,6 +191,14 @@ class selectPratViewController: UIViewController, UIScrollViewDelegate, APIContr
                     self.praticiens.removeAll(keepCapacity: false)
                     self.praticiens.append(Praticien(id: 0, nom:"Serveur introuvable", prenom: ""))
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    let alert = SCLAlertView()
+                    let txt = alert.addTextField(title:"192.168.x.xx")
+                    alert.addButton("Valider") {
+                        println("Text value: \(txt.text)")
+                        preference.ipServer=txt.text
+                        self.api!.selectpraticien()
+                    }
+                    alert.showError("Serveur Introuvable", subTitle: "Veuillez saisir une adresse correct")
                     self.initScroll()
                     self.loadVisiblePages()
             case 2 :

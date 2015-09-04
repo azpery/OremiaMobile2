@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1223CBB91B187D0300A42C80 /* EtatCivilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223CBB81B187D0300A42C80 /* EtatCivilTableViewController.swift */; };
 		1223CBBB1B1884BC00A42C80 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223CBBA1B1884BC00A42C80 /* PickerViewController.swift */; };
+		1271D9361B95BF1D00911A88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266E31B4D296000BA4C5A /* ImageIO.framework */; };
 		1274F9241B1B6F52002FCF43 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9231B1B6F52002FCF43 /* date.swift */; };
 		1274F9261B1B7D2B002FCF43 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9251B1B7D2B002FCF43 /* SearchTableViewCell.swift */; };
 		1274F9281B1C72FD002FCF43 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274F9271B1C72FD002FCF43 /* ImageScrollViewController.swift */; };
@@ -35,7 +36,6 @@
 		12B347CE1B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A71B10B0AD00A8AC3D /* FullScreenDocumentViewController.swift */; };
 		12B347CF1B10B0AD00A8AC3D /* FullScreenRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347A81B10B0AD00A8AC3D /* FullScreenRadioViewController.swift */; };
 		12B347D11B10B0AD00A8AC3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B347AB1B10B0AD00A8AC3D /* Images.xcassets */; };
-		12B347D21B10B0AD00A8AC3D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B347AC1B10B0AD00A8AC3D /* Info.plist */; };
 		12B347D31B10B0AD00A8AC3D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AD1B10B0AD00A8AC3D /* MapViewController.swift */; };
 		12B347D41B10B0AD00A8AC3D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AE1B10B0AD00A8AC3D /* MenuController.swift */; };
 		12B347D51B10B0AD00A8AC3D /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B347AF1B10B0AD00A8AC3D /* model.swift */; };
@@ -57,19 +57,6 @@
 		12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E61B10B0EB00A8AC3D /* LaunchScreen.xib */; };
 		12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B347E81B10B0EB00A8AC3D /* Main.storyboard */; };
 		12B347EE1B10B10E00A8AC3D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B347EC1B10B10E00A8AC3D /* SWRevealViewController.m */; };
-		12C266DF1B4D278D00BA4C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266DE1B4D278D00BA4C5A /* MapKit.framework */; };
-		12C266E01B4D27A600BA4C5A /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266DE1B4D278D00BA4C5A /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		12C266E41B4D296000BA4C5A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266E31B4D296000BA4C5A /* ImageIO.framework */; };
-		12C266E51B4D296500BA4C5A /* ImageIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12C266E31B4D296000BA4C5A /* ImageIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		12CF39AA1B175F6A00883192 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A21B175F6A00883192 /* Animatable.swift */; };
-		12CF39AB1B175F6A00883192 /* AnimatableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A31B175F6A00883192 /* AnimatableImageView.swift */; };
-		12CF39AC1B175F6A00883192 /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A41B175F6A00883192 /* AnimatedFrame.swift */; };
-		12CF39AD1B175F6A00883192 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A51B175F6A00883192 /* Animator.swift */; };
-		12CF39AE1B175F6A00883192 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A61B175F6A00883192 /* Curry.swift */; };
-		12CF39AF1B175F6A00883192 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A81B175F6A00883192 /* ImageSourceHelpers.swift */; };
-		12CF39B01B175F6A00883192 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39A91B175F6A00883192 /* UIImageExtension.swift */; };
-		12CF39B61B1764CF00883192 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CF39A01B175F4600883192 /* Runes.framework */; };
-		12CF39B71B1764CF00883192 /* Runes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12CF39A01B175F4600883192 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12CF39DD1B1789D100883192 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C11B1789D000883192 /* NSData+ImageContentType.m */; };
 		12CF39DE1B1789D100883192 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C31B1789D000883192 /* SDImageCache.m */; };
 		12CF39DF1B1789D100883192 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF39C51B1789D000883192 /* SDWebImageCompat.m */; };
@@ -97,22 +84,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		12CF39B81B1764CF00883192 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				12C266E51B4D296500BA4C5A /* ImageIO.framework in Embed Frameworks */,
-				12C266E01B4D27A600BA4C5A /* MapKit.framework in Embed Frameworks */,
-				12CF39B71B1764CF00883192 /* Runes.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1223CBB81B187D0300A42C80 /* EtatCivilTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatCivilTableViewController.swift; sourceTree = "<group>"; };
 		1223CBBA1B1884BC00A42C80 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +98,9 @@
 		129D28BA1B15F2ED00EF28FA /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
 		129D28BB1B15F2ED00EF28FA /* NSDate+CupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CupertinoYankee.m"; sourceTree = "<group>"; };
 		129D28C41B1613EE00EF28FA /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		12B347261B109E3000A8AC3D /* Oremia Mobile 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oremia Mobile 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B347261B109E3000A8AC3D /* OremiaMobile2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OremiaMobile2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B3472A1B109E3000A8AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12B3473B1B109E3000A8AC3D /* Oremia Mobile 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Oremia Mobile 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B3473B1B109E3000A8AC3D /* OremiaMobile2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OremiaMobile2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B347401B109E3000A8AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12B347411B109E3000A8AC3D /* Oremia_Mobile_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oremia_Mobile_2Tests.swift; sourceTree = "<group>"; };
 		12B347991B10B0AB00A8AC3D /* Oremia Mobile 2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Oremia Mobile 2-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -176,15 +147,6 @@
 		12B347ED1B10B10E00A8AC3D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		12C266DE1B4D278D00BA4C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12C266E31B4D296000BA4C5A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		12CF39A01B175F4600883192 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
-		12CF39A21B175F6A00883192 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		12CF39A31B175F6A00883192 /* AnimatableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableImageView.swift; sourceTree = "<group>"; };
-		12CF39A41B175F6A00883192 /* AnimatedFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedFrame.swift; sourceTree = "<group>"; };
-		12CF39A51B175F6A00883192 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		12CF39A61B175F6A00883192 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
-		12CF39A71B175F6A00883192 /* Gifu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gifu.h; sourceTree = "<group>"; };
-		12CF39A81B175F6A00883192 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSourceHelpers.swift; sourceTree = "<group>"; };
-		12CF39A91B175F6A00883192 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		12CF39C01B1789D000883192 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		12CF39C11B1789D000883192 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		12CF39C21B1789D000883192 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -222,9 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12C266E41B4D296000BA4C5A /* ImageIO.framework in Frameworks */,
-				12C266DF1B4D278D00BA4C5A /* MapKit.framework in Frameworks */,
-				12CF39B61B1764CF00883192 /* Runes.framework in Frameworks */,
+				1271D9361B95BF1D00911A88 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +259,8 @@
 		12B347271B109E3000A8AC3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12B347261B109E3000A8AC3D /* Oremia Mobile 2.app */,
-				12B3473B1B109E3000A8AC3D /* Oremia Mobile 2Tests.xctest */,
+				12B347261B109E3000A8AC3D /* OremiaMobile2.app */,
+				12B3473B1B109E3000A8AC3D /* OremiaMobile2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -426,7 +386,6 @@
 			children = (
 				12C266E31B4D296000BA4C5A /* ImageIO.framework */,
 				12C266DE1B4D278D00BA4C5A /* MapKit.framework */,
-				12CF39A01B175F4600883192 /* Runes.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,14 +393,6 @@
 		12CF39B21B175F7E00883192 /* gifu */ = {
 			isa = PBXGroup;
 			children = (
-				12CF39A21B175F6A00883192 /* Animatable.swift */,
-				12CF39A31B175F6A00883192 /* AnimatableImageView.swift */,
-				12CF39A41B175F6A00883192 /* AnimatedFrame.swift */,
-				12CF39A51B175F6A00883192 /* Animator.swift */,
-				12CF39A61B175F6A00883192 /* Curry.swift */,
-				12CF39A71B175F6A00883192 /* Gifu.h */,
-				12CF39A81B175F6A00883192 /* ImageSourceHelpers.swift */,
-				12CF39A91B175F6A00883192 /* UIImageExtension.swift */,
 			);
 			name = gifu;
 			sourceTree = "<group>";
@@ -485,27 +436,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12B347251B109E3000A8AC3D /* Oremia Mobile 2 */ = {
+		12B347251B109E3000A8AC3D /* OremiaMobile2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12B347451B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "Oremia Mobile 2" */;
+			buildConfigurationList = 12B347451B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "OremiaMobile2" */;
 			buildPhases = (
 				12B347221B109E3000A8AC3D /* Sources */,
 				12B347231B109E3000A8AC3D /* Frameworks */,
 				12B347241B109E3000A8AC3D /* Resources */,
-				12CF39B81B1764CF00883192 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Oremia Mobile 2";
+			name = OremiaMobile2;
 			productName = "Oremia Mobile 2";
-			productReference = 12B347261B109E3000A8AC3D /* Oremia Mobile 2.app */;
+			productReference = 12B347261B109E3000A8AC3D /* OremiaMobile2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		12B3473A1B109E3000A8AC3D /* Oremia Mobile 2Tests */ = {
+		12B3473A1B109E3000A8AC3D /* OremiaMobile2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12B347481B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "Oremia Mobile 2Tests" */;
+			buildConfigurationList = 12B347481B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "OremiaMobile2Tests" */;
 			buildPhases = (
 				12B347371B109E3000A8AC3D /* Sources */,
 				12B347381B109E3000A8AC3D /* Frameworks */,
@@ -516,9 +466,9 @@
 			dependencies = (
 				12B3473D1B109E3000A8AC3D /* PBXTargetDependency */,
 			);
-			name = "Oremia Mobile 2Tests";
+			name = OremiaMobile2Tests;
 			productName = "Oremia Mobile 2Tests";
-			productReference = 12B3473B1B109E3000A8AC3D /* Oremia Mobile 2Tests.xctest */;
+			productReference = 12B3473B1B109E3000A8AC3D /* OremiaMobile2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -527,11 +477,17 @@
 		12B3471E1B109E3000A8AC3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Zumatec;
 				TargetAttributes = {
 					12B347251B109E3000A8AC3D = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5PJ7449KK7;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					12B3473A1B109E3000A8AC3D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -539,8 +495,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 12B347211B109E3000A8AC3D /* Build configuration list for PBXProject "Oremia Mobile 2" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 12B347211B109E3000A8AC3D /* Build configuration list for PBXProject "OremiaMobile2" */;
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -552,8 +508,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12B347251B109E3000A8AC3D /* Oremia Mobile 2 */,
-				12B3473A1B109E3000A8AC3D /* Oremia Mobile 2Tests */,
+				12B347251B109E3000A8AC3D /* OremiaMobile2 */,
+				12B3473A1B109E3000A8AC3D /* OremiaMobile2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -563,7 +519,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B347D21B10B0AD00A8AC3D /* Info.plist in Resources */,
 				12B347EA1B10B0EB00A8AC3D /* LaunchScreen.xib in Resources */,
 				12B347D11B10B0AD00A8AC3D /* Images.xcassets in Resources */,
 				12B347EB1B10B0EB00A8AC3D /* Main.storyboard in Resources */,
@@ -586,7 +541,6 @@
 			files = (
 				12CF39E61B1789D100883192 /* UIImage+GIF.m in Sources */,
 				12B347C41B10B0AD00A8AC3D /* APIController.swift in Sources */,
-				12CF39AA1B175F6A00883192 /* Animatable.swift in Sources */,
 				12B347DB1B10B0AD00A8AC3D /* praticien.swift in Sources */,
 				12CF39E31B1789D100883192 /* SDWebImageManager.m in Sources */,
 				12B347CF1B10B0AD00A8AC3D /* FullScreenRadioViewController.swift in Sources */,
@@ -603,11 +557,9 @@
 				12B347C91B10B0AD00A8AC3D /* DetailsViewController.swift in Sources */,
 				12B347D71B10B0AD00A8AC3D /* NewsTableViewController.swift in Sources */,
 				12B347C21B10B0AD00A8AC3D /* ActesTableViewCell.swift in Sources */,
-				12CF39B01B175F6A00883192 /* UIImageExtension.swift in Sources */,
 				12B347CD1B10B0AD00A8AC3D /* EtatCivilViewController.swift in Sources */,
 				12B347DD1B10B0AD00A8AC3D /* RadioCollectionViewController.swift in Sources */,
 				12B347E01B10B0AD00A8AC3D /* selectedUser.swift in Sources */,
-				12CF39AF1B175F6A00883192 /* ImageSourceHelpers.swift in Sources */,
 				12B347CC1B10B0AD00A8AC3D /* DocumentTableViewCell.swift in Sources */,
 				12B347CA1B10B0AD00A8AC3D /* DocumentPatientTableViewController.swift in Sources */,
 				12B347C51B10B0AD00A8AC3D /* AppDelegate.swift in Sources */,
@@ -629,21 +581,17 @@
 				12CF39E01B1789D100883192 /* SDWebImageDecoder.m in Sources */,
 				1223CBB91B187D0300A42C80 /* EtatCivilTableViewController.swift in Sources */,
 				129D28C51B1613EE00EF28FA /* CalendarViewController.swift in Sources */,
-				12CF39AE1B175F6A00883192 /* Curry.swift in Sources */,
 				12B347DC1B10B0AD00A8AC3D /* RadioCollectionViewCell.swift in Sources */,
 				12B347D41B10B0AD00A8AC3D /* MenuController.swift in Sources */,
 				12B347C81B10B0AD00A8AC3D /* DetailNavigationController.swift in Sources */,
 				12B347CB1B10B0AD00A8AC3D /* Documents.swift in Sources */,
 				12B347C11B10B0AD00A8AC3D /* Actes.swift in Sources */,
 				12B347C61B10B0AD00A8AC3D /* ConfigurationViewController.swift in Sources */,
-				12CF39AD1B175F6A00883192 /* Animator.swift in Sources */,
 				12B347E51B10B0AD00A8AC3D /* ViewController.swift in Sources */,
 				12B347C71B10B0AD00A8AC3D /* ConnexionString.swift in Sources */,
 				12B347E31B10B0AD00A8AC3D /* Track.swift in Sources */,
-				12CF39AB1B175F6A00883192 /* AnimatableImageView.swift in Sources */,
 				12B347DF1B10B0AD00A8AC3D /* SCLAlertView.swift in Sources */,
 				12CF39DD1B1789D100883192 /* NSData+ImageContentType.m in Sources */,
-				12CF39AC1B175F6A00883192 /* AnimatedFrame.swift in Sources */,
 				12B347D31B10B0AD00A8AC3D /* MapViewController.swift in Sources */,
 				12CF39E21B1789D100883192 /* SDWebImageDownloaderOperation.m in Sources */,
 				12B347E11B10B0AD00A8AC3D /* selectPratViewController.swift in Sources */,
@@ -667,7 +615,7 @@
 /* Begin PBXTargetDependency section */
 		12B3473D1B109E3000A8AC3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 12B347251B109E3000A8AC3D /* Oremia Mobile 2 */;
+			target = 12B347251B109E3000A8AC3D /* OremiaMobile2 */;
 			targetProxy = 12B3473C1B109E3000A8AC3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -778,15 +726,19 @@
 		12B347461B109E3000A8AC3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-7";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Oremia Mobile 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OremiaMobile2;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Oremia Mobile 2/Oremia Mobile 2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -795,15 +747,19 @@
 		12B347471B109E3000A8AC3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-7";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Oremia Mobile 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OremiaMobile2;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Oremia Mobile 2/Oremia Mobile 2-Bridging-Header.h";
 			};
 			name = Release;
@@ -822,7 +778,7 @@
 				);
 				INFOPLIST_FILE = "Oremia Mobile 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OremiaMobile2Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oremia Mobile 2.app/Oremia Mobile 2";
 			};
 			name = Debug;
@@ -837,7 +793,7 @@
 				);
 				INFOPLIST_FILE = "Oremia Mobile 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OremiaMobile2Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oremia Mobile 2.app/Oremia Mobile 2";
 			};
 			name = Release;
@@ -845,7 +801,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12B347211B109E3000A8AC3D /* Build configuration list for PBXProject "Oremia Mobile 2" */ = {
+		12B347211B109E3000A8AC3D /* Build configuration list for PBXProject "OremiaMobile2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12B347431B109E3000A8AC3D /* Debug */,
@@ -854,7 +810,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12B347451B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "Oremia Mobile 2" */ = {
+		12B347451B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "OremiaMobile2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12B347461B109E3000A8AC3D /* Debug */,
@@ -863,7 +819,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12B347481B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "Oremia Mobile 2Tests" */ = {
+		12B347481B109E3000A8AC3D /* Build configuration list for PBXNativeTarget "OremiaMobile2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12B347491B109E3000A8AC3D /* Debug */,

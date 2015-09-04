@@ -22,9 +22,10 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var logOut: UIBarButtonItem!
     @IBOutlet weak var appsTableView: UITableView!
-        required init(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-        }
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         self.tracksTableView.reloadData()
+        addButton.target = self
+        addButton.action = "addNewPatient"
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchActive {
@@ -43,6 +46,9 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             return tracks.count
         }
+    }
+    func addNewPatient(){
+        api.sendRequest("INSERT INTO patients( id, nir, genre, nom, prenom, adresse, codepostal, ville, telephone1, telephone2, email, naissance, creation, idpraticien, idphoto, info, autorise_sms, correspondant, ipp2, adresse2, patient_par, amc, amc_prefs, profession, correspondants, statut, famille, tel1_info, tel2_info)VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT);")
     }
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
@@ -115,13 +121,13 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.avatar.sd_setImageWithURL(urlString, placeholderImage: nil, options: .CacheMemoryOnly, progress: {
                 [weak self]
                 (receivedSize, expectedSize) -> Void in
-                    cell.avatar.image = track.photo
+                cell.avatar.image = track.photo
                 }) {
                     [weak self]
                     (image, error, _, _) -> Void in
                     cell.avatar.image = image
                     track.photo = image
-                }
+            }
             //cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
         }
@@ -147,7 +153,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier=="toPatientTabBar"){
-        var detailsViewController: TabBarViewController = segue.destinationViewController as! TabBarViewController
+            var detailsViewController: TabBarViewController = segue.destinationViewController as! TabBarViewController
             var albumIndex : Int
             var selectedAlbum:patients
             if (searchActive){
@@ -157,7 +163,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
                 albumIndex = appsTableView!.indexPathForSelectedRow()!.row
                 selectedAlbum = self.tracks[albumIndex]
             }
-        detailsViewController.patient = selectedAlbum
+            detailsViewController.patient = selectedAlbum
         }
     }
     func handleError(results: Int) {
@@ -165,7 +171,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
             SCLAlertView().showError("Serveur introuvable", subTitle: "Veuillez rentrer une adresse ip de serveur correct", closeButtonTitle:"Fermer")
         }
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-
+        
     }
-
+    
 }

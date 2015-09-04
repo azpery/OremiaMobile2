@@ -826,11 +826,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aez-fR-Gp2"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="aez-fR-Gp2" id="O93-eM-gdA"/>
                         <outlet property="appsTableView" destination="nKn-uX-9I3" id="AAc-ZF-u4p"/>
                         <outlet property="menuButton" destination="EDe-9w-n9H" id="gRe-KE-UHx"/>
                         <outlet property="searchDisplayController" destination="0CZ-ZB-dFo" id="ruN-Ly-a2e"/>
                         <outlet property="titleLabel" destination="2cY-Pj-43N" id="P7c-bZ-Pib"/>
                         <outlet property="tracksTableView" destination="nKn-uX-9I3" id="48R-kw-WZY"/>
+                        <segue destination="XGf-ZQ-iKL" kind="showDetail" identifier="newPatient" id="JbV-gC-jsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQu-aR-S1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2018,7 +2020,8 @@
         <image name="sprite" width="358" height="97"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="knL-Hf-Rh7"/>
         <segue reference="TeP-Gr-Ivr"/>
+        <segue reference="knL-Hf-Rh7"/>
+        <segue reference="JbV-gC-jsQ"/>
     </inferredMetricsTieBreakers>
 </document>
